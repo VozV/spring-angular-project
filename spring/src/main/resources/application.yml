@@ -1,6 +1,10 @@
 server:
   port: 8080
 spring:
+  task:
+    scheduling:
+      pool:
+        size: 10
   mvc:
     servlet:
       path: /api
@@ -16,6 +20,8 @@ spring:
       auto-commit: true
       connection-timeout: 60000
       maximum-pool-size: 50
+  customParameters:
+    salt: someValue
 logging:
   file:
     max-history: 20

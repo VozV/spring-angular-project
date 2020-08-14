@@ -1,0 +1,41 @@
+<button mat-icon-button class="nav-button" [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+  <mat-icon>menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+<!--  <button mat-menu-item href="/room">
+    <mat-icon>dialpad</mat-icon>
+    <span>Room</span>
+  </button>
+  <button mat-menu-item disabled>
+    <mat-icon>voicemail</mat-icon>
+    <span>Check voice mail</span>
+  </button>-->
+  <button mat-menu-item (click)="toUrl($event)" value="/course">
+    <mat-icon>menu_book</mat-icon>
+    <span>Курсы</span>
+  </button>
+  <button mat-menu-item (click)="toUrl($event)" value="/instrument">
+    <mat-icon>build</mat-icon>
+    <span>Инструменты</span>
+  </button>
+  <button mat-menu-item (click)="toUrl($event)" value="/room">
+    <mat-icon>account_balance</mat-icon>
+    <span>Аудитории</span>
+  </button>
+  <button mat-menu-item (click)="toUrl($event)" value="/student">
+    <mat-icon>perm_identity</mat-icon>
+    <span>Студенты</span>
+  </button>
+  <button mat-menu-item (click)="toUrl($event)" value="/teacher">
+    <mat-icon>psychology</mat-icon>
+    <span>Преподаватели</span>
+  </button>
+  <button mat-menu-item (click)="toUrl($event)" value="/lesson">
+    <mat-icon>school</mat-icon>
+    <span>Уроки</span>
+  </button>
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Выйти</span>
+  </button>
+</mat-menu>
